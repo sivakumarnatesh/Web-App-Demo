@@ -2,9 +2,9 @@
   width: 100%;
   text-align: center;
   margin-top: 30px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   margin-bottom: 30px;
 }
 .Heading-Inside {
@@ -16,7 +16,9 @@
 .products {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .product1 img,
 .product2 img,
@@ -24,5 +26,9 @@
 .product4 img {
   width: 600px;
   height: 600px;
-  
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+.product1:hover,.product2:hover,.product3:hover,.product4:hover img{
+    opacity: 0.8;
 }

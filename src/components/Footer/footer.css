@@ -1,0 +1,40 @@
+.container{
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:30px;
+}
+.column-head{
+    color:white;
+    margin-bottom:25px;
+    text-align:left;
+}
+.column-body{
+    text-align:left;
+    margin-bottom:20px;
+    color:#8B8B8B;
+}
+.column1-body2{
+    margin-bottom:15px;
+    color:white
+}
+.column1-body2:hover{
+    cursor:'pointer';
+    text-decoration: underline;
+}
+.body-content{
+    padding-bottom: 10px;
+}
+.body-content:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.body-2{
+    color:white;
+    text-align:left
+}
+.body-2:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}

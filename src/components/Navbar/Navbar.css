@@ -3,7 +3,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     background-color: rgba(10,10,10,.299) !important;
-    /* position: absolute; */
+    position: absolute;
     right:0px;
     padding: 10px 20px;
     width: 100%;
