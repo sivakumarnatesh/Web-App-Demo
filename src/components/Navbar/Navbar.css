@@ -1,0 +1,22 @@
+.HeaderContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: rgba(10,10,10,.299) !important;
+    /* position: absolute; */
+    right:0px;
+    padding: 10px 20px;
+    width: 100%;
+    overflow-x: hidden ;
+
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    color: #ffffff !important;
+    width: 150px;
+}
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper{
+    max-width: 100%  !important;
+    width: 100vw !important;
+    left: 0px !important;
+    /* z-index: inherit; */
+}

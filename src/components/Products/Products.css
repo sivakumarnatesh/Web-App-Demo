@@ -1,0 +1,28 @@
+.Heading {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.Heading-Inside {
+  color: #ae8f21;
+  width: 100vw;
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.product1 img,
+.product2 img,
+.product3 img,
+.product4 img {
+  width: 600px;
+  height: 600px;
+  
+}

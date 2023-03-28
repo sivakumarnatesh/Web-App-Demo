@@ -1,52 +1,63 @@
-import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import "./Navbar.css";
 
 function Navbar() {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
-    <div>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Accordion 2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>Disabled Accordion</Typography>
-        </AccordionSummary>
-      </Accordion>
+    <div className="HeaderContainer">
+      <Button
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        Our Brands
+      </Button>
+      <Button
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        Get In Touch
+      </Button>
+      <Button
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        About Us
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
     </div>
   );
 }
